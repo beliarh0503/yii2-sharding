@@ -20,15 +20,15 @@ class ParserSql
     /**
      * Выражения для получения значения равенства
      */
-    const REG_AND = '/(?<=[\.`\s])$:params\s*=\s*([a-zA-Z_0-9]+)/i';
+    const REG_AND = '/(?<![a-zA-Z_0-9])$:params\s*=\s*([a-zA-Z_0-9]+)/i';
     /**
      * Выражение для получения данных in
      */
-    const REG_IN = '/(?<=[\.`\s])$:params\s*IN\s*\(([a-zA-Z_0-9,\s]+)\)/i';
+    const REG_IN = '/(?<![a-zA-Z_0-9])$:params\s*IN\s*\(([a-zA-Z_0-9,\s]+)\)/i';
     /**
      * Выражение для получения данных between
      */
-    const REG_BETWEEN = '/(?<=[\.`\s])$:params\s*BETWEEN\s*([0-9]+) AND ([0-9]+)/i';
+    const REG_BETWEEN = '/(?<![a-zA-Z_0-9])$:params\s*BETWEEN\s*([0-9]+) AND ([0-9]+)/i';
 
     /**
      * @var array
