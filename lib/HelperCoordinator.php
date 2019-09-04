@@ -312,7 +312,7 @@ class HelperCoordinator
         $values = (array)$values;
 
         //todo in по 2 колонкам. Проверить целесообразность
-        if (count($column) > 1) {
+        if (is_array($column) && count($column) > 1) {
             return '';
         }
 
